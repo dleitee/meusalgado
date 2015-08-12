@@ -1,0 +1,17 @@
+{
+  "salgados": [
+    {id: 1, name: "Coxinha", quantity: 10, value: 7.5, total: 0, img: 'coxinha.jpg'},
+    {id: 2, name: "Salsicha", quantity: 10, value: 7.5, total: 0, img: 'salsicha.jpg'},
+    {id: 3, name: "Risoles de Carne", quantity: 10, value: 7.5, total: 0, img: 'risoles-de-carne.jpg'},
+    {id: 4, name: "Bolinho de Queijo", quantity: 10, value: 7.5, total: 0, img: 'bolinha.jpg'},
+    {id: 5, name: "Almôndega", quantity: 10, value: 7.5, total: 0, img: 'almondega.jpg'},
+    {id: 6, name: "Kibe com Requeijão", quantity: 10, value: 7.5, total: 0, img: 'kibe.jpg'},    
+    {id: 7, name: "Kibe sem Requeijão", quantity: 10, value: 7.5, total: 0, img: 'kibe.jpg'},    
+    {id: 8, name: "Pastel de Carne", quantity: 10, value: 7.5, total: 0, img: 'pastelzinho-de-carne.jpg'},
+    {id: 9, name: "Pastel de Frango (Requeijão)", quantity: 10, value: 7.5, total: 0, img: 'pastelzinho-de-frango.jpg'},
+    {id: 10, name: "Risoles de Frango", quantity: 10, value: 7.5, total: 0, img: 'risoles-de-frango.jpg'},
+    {id: 11, name: "Espetinho de Frango", quantity: 10, value: 9.5, total: 0, img: 'espetinho-de-frango.jpg'},
+    {id: 12, name: "Pastel de Pizza", quantity: 10, value: 7.5, total: 0, img: 'pastelzinho-de-pizza.jpg'},
+    {id: 13, name: "Churros de Doce de Leite", quantity: 10, value: 9.5, total: 0, img: 'minichurros-doce-de-leite.jpg'}
+  ] 
+}

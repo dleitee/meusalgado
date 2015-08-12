@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="../../favicon.ico">
+
+        <title>Pedido</title>
+
+
+        <link href="http://www.meusalgado.com.br/css/bootstrap.min.css" rel="stylesheet">
+
+
+        <style>
+            body {
+                padding-top: 10px;
+                margin: 0 auto;
+
+            }
+            .panel-title {
+                font-size: 12px !important;
+            }
+        </style>
+
+
+    </head>
+
+    <body>
+
+
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-9">
+                    <div class="row">
+
+                        <!-- Inicio Coxinha  -->
+                        <div class="col-lg-4">
+                            <div class="panel panel-default">
+                                <div class="panel-heading panel-title small">
+                                    Coxinha
+                                      <div class="pull-right">
+                                        <button onclick="menos('#coxinha')" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-minus"></i></button>
+                                        <button onclick="add('#coxinha')" class="btn btn-success btn-xs"><i class="glyphicon glyphicon-plus"></i></button>
+
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <img style="max-width: 100%;" src="http://www.meusalgado.com.br/coxinha.jpg" alt="..." class="img-circle">
+                                </div>
+
+                                <div class="panel-footer panel-title text-center" >
+                                    Subtotal: <span id="valorCoxinha">R$ 0,00</span>
+                                    <br>
+                                    Quantidade: <span id="qtdeCoxinha">0</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Fim Coxinha  -->
+
+                        <!-- Inicio Salsicha  -->
+                        <div class="col-lg-4">
+                            <div class="panel panel-default">
+                                <div class="panel-heading panel-title">
+                                    Salsicha
+
+                                    <div class="pull-right">
+                                        <button onclick="menos('#salsicha')" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-minus"></i></button>
+                                        <button onclick="add('#salsicha')" class="btn btn-success btn-xs"><i class="glyphicon glyphicon-plus"></i></button>
+
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <img style="max-width: 100%;" src="http://www.meusalgado.com.br/wp-content/uploads/2015/06/salsicha0001.jpg" alt="..." class="img-circle">
+                                </div>
+
+                                <div class="panel-footer panel-title text-center" id="">
+                                    Subtotal: <span id="valorSalsicha">R$ 0,00</span>
+                                    <br>
+                                    Quantidade: <span id="qtdeSalsicha">0</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Fim Salsicha  -->
+
+                        <!-- Inicio Risoles de Carne  -->
+                        <div class="col-lg-4">
+                            <div class="panel panel-default">
+                                <div class="panel-heading panel-title">
+                                    Risoles de Carne
+
+                                    <div class="pull-right">
+                                        <button onclick="menos('#risolesCarne')" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-minus"></i></button>
+                                        <button onclick="add('#risolesCarne')" class="btn btn-success btn-xs"><i class="glyphicon glyphicon-plus"></i></button>
+
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <img style="max-width: 100%;" src="http://www.meusalgado.com.br/wp-content/uploads/2015/06/risoles-de-carne.jpg" alt="..." class="img-circle">
+                                </div>
+
+                                <div class="panel-footer panel-title text-center" id="">
+                                    Subtotal: <span id="valorRisolesCarne">R$ 0,00</span>
+                                    <br>
+                                    Quantidade: <span id="qtdeRisolesCarne">0</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Fim Risoles Carne  -->
+
+                        <!-- Inicio Coxinha  -->
+                        <div class="col-lg-4">
+                            <div class="panel panel-default">
+                                <div class="panel-heading panel-title">
+                                    Bolinho de Queijo
+
+                                    <div class="pull-right">
+                                        <button onclick="menos('#bolinhoQueijo')" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-minus"></i></button>
+                                        <button onclick="add('#bolinhoQueijo')" class="btn btn-success btn-xs"><i class="glyphicon glyphicon-plus"></i></button>
+
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <img style="max-width: 100%;" src="http://www.meusalgado.com.br/wp-content/uploads/2015/06/bolinha0001.jpg" alt="..." class="img-circle">
+                                </div>
+
+                                <div class="panel-footer panel-title text-center" id="">
+                                    Subtotal: <span id="valorBolinhoQueijo">R$ 0,00</span>
+                                    <br>
+                                    Quantidade: <span id="qtdeBolinhoQueijo">0</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Fim BolinhoQueijo  -->
+
+                        <!-- Inicio Almondega  -->
+                        <div class="col-lg-4">
+                            <div class="panel panel-default">
+                                <div class="panel-heading panel-title">
+                                    Alm&ocirc;ndega
+
+                                    <div class="pull-right">
+                                        <button onclick="menos('#almondega')" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-minus"></i></button>
+                                        <button onclick="add('#almondega')" class="btn btn-success btn-xs"><i class="glyphicon glyphicon-plus"></i></button>
+
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <img style="max-width: 100%;" src="http://www.meusalgado.com.br/wp-content/uploads/2015/06/almondega0001.jpg" alt="..." class="img-circle">
+                                </div>
+
+                                <div class="panel-footer panel-title text-center" id="valorAlmondega">
+                                    Subtotal: R$ 0,00
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Fim Almondega  -->
+
+                        <!-- Inicio kibe requeijao  -->
+                        <div class="col-lg-4">
+                            <div class="panel panel-default">
+                                <div class="panel-heading panel-title">
+                                    Kibe com Requeij&atilde;o
+
+                                    <div class="pull-right">
+                                        <button onclick="menos('#kibeRequeijao')" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-minus"></i></button>
+                                        <button onclick="add('#kibeRequeijao')" class="btn btn-success btn-xs"><i class="glyphicon glyphicon-plus"></i></button>
+
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <img style="max-width: 100%;" src="http://www.meusalgado.com.br/wp-content/uploads/2015/06/kibe0001.jpg" alt="..." class="img-circle">
+                                </div>
+
+                                <div class="panel-footer panel-title text-center" id="valorKibeRequeijao">
+                                    Subtotal: R$ 0,00
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Fim kibe requeijao  -->
+
+                        <!-- Inicio kibe  -->
+                        <div class="col-lg-4">
+                            <div class="panel panel-default">
+                                <div class="panel-heading panel-title">
+                                    Kibe sem Requeij&atilde;o
+
+                                    <div class="pull-right">
+                                        <button onclick="menos('#kibe')" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-minus"></i></button>
+                                        <button onclick="add('#kibe')" class="btn btn-success btn-xs"><i class="glyphicon glyphicon-plus"></i></button>
+
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <img style="max-width: 100%;" src="http://www.meusalgado.com.br/wp-content/uploads/2015/06/kibe0001.jpg" alt="..." class="img-circle">
+                                </div>
+
+                                <div class="panel-footer panel-title text-center" id="valorKibe">
+                                    Subtotal: R$ 0,00
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Fim Kibe  -->
+
+                        <!-- Inicio pastel carne  -->
+                        <div class="col-lg-4">
+                            <div class="panel panel-default">
+                                <div class="panel-heading panel-title">
+                                    Pastel de Carne
+
+                                    <div class="pull-right">
+                                        <button onclick="menos('#pastelCarne')" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-minus"></i></button>
+                                        <button onclick="add('#pastelCarne')" class="btn btn-success btn-xs"><i class="glyphicon glyphicon-plus"></i></button>
+
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <img style="max-width: 100%;" src="http://www.meusalgado.com.br/wp-content/uploads/2015/06/pastelzinho-de-carne.jpg" alt="..." class="img-circle">
+                                </div>
+
+                                <div class="panel-footer panel-title text-center" id="valorPastelCarne">
+                                    Subtotal: R$ 0,00
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Fim Pastel Carne  -->
+
+
+                        <!-- Inicio pastel frago requeijao  -->
+                        <div class="col-lg-4">
+                            <div class="panel panel-default">
+                                <div class="panel-heading panel-title">
+                                    Pastel de Frango (requeij&atilde;o)
+
+                                    <div class="pull-right">
+                                        <button onclick="menos('#pastelFrango')" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-minus"></i></button>
+                                        <button onclick="add('#pastelFrango')" class="btn btn-success btn-xs"><i class="glyphicon glyphicon-plus"></i></button>
+
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <img style="max-width: 100%;" src="http://www.meusalgado.com.br/wp-content/uploads/2015/06/pastelzinho-de-frango.jpg" alt="..." class="img-circle">
+                                </div>
+
+                                <div class="panel-footer panel-title text-center" id="valorPastelFrango">
+                                    Subtotal: R$ 0,00
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Fim Pastel Carne  -->
+
+
+                        <!-- Inicio risoles de frango  -->
+                        <div class="col-lg-4">
+                            <div class="panel panel-default">
+                                <div class="panel-heading panel-title">
+                                    Risoles de frango
+
+                                    <div class="pull-right">
+                                        <button onclick="menos('#risolesfrango')" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-minus"></i></button>
+                                        <button onclick="add('#risolesfrango')" class="btn btn-success btn-xs"><i class="glyphicon glyphicon-plus"></i></button>
+
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <img style="max-width: 100%;" src="http://www.meusalgado.com.br/wp-content/uploads/2015/06/risoles-de-frango.jpg" alt="..." class="img-circle">
+                                </div>
+
+                                <div class="panel-footer panel-title text-center" id="valorrisolesfrango">
+                                    Subtotal: R$ 0,00
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Fim risolesfrango -->
+
+                        <!-- Inicio espetinho frango  -->
+                        <div class="col-lg-4">
+                            <div class="panel panel-default">
+                                <div class="panel-heading panel-title">
+                                    Espetinho de Frango
+
+                                    <div class="pull-right">
+                                        <button onclick="menos('#espetinhofrango')" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-minus"></i></button>
+                                        <button onclick="add('#espetinhofrango')" class="btn btn-success btn-xs"><i class="glyphicon glyphicon-plus"></i></button>
+
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <img style="max-width: 100%;" src="http://www.meusalgado.com.br/wp-content/uploads/2015/06/espetinho-de-frango.jpg" alt="..." class="img-circle">
+                                </div>
+
+                                <div class="panel-footer panel-title text-center" id="valorespetinhofrango">
+                                    Subtotal: R$ 0,00
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Fim espetinhofrango -->
+
+
+                        <!-- Inicio pastel pizza  -->
+                        <div class="col-lg-4">
+                            <div class="panel panel-default">
+                                <div class="panel-heading panel-title">
+                                    Pastel de Pizza
+
+                                    <div class="pull-right">
+                                        <button onclick="menos('#pastelpizza')" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-minus"></i></button>
+                                        <button onclick="add('#pastelpizza')" class="btn btn-success btn-xs"><i class="glyphicon glyphicon-plus"></i></button>
+
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <img style="max-width: 100%;" src="http://www.meusalgado.com.br/wp-content/uploads/2015/06/pastelzinho-de-pizza.jpg" alt="..." class="img-circle">
+                                </div>
+
+                                <div class="panel-footer panel-title text-center" id="valorpastelpizza">
+                                    Subtotal: R$ 0,00
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Fim pastelpizza -->
+
+                        <!-- Inicio churros  -->
+                        <div class="col-lg-4">
+                            <div class="panel panel-default">
+                                <div class="panel-heading panel-title">
+                                    Churros de Doce de Leite
+
+                                    <div class="pull-right">
+                                        <button onclick="menos('#churros')" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-minus"></i></button>
+                                        <button onclick="add('#churros')" class="btn btn-success btn-xs"><i class="glyphicon glyphicon-plus"></i></button>
+
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <img style="max-width: 100%;" src="http://www.meusalgado.com.br/wp-content/uploads/2015/06/minichurros-doce-de-leite.jpg" alt="..." class="img-circle">
+                                </div>
+
+                                <div class="panel-footer panel-title text-center" id="valorchurros">
+                                    Subtotal: R$ 0,00
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Fim churros -->
+
+
+                    </div>
+
+
+                </div>
+                <div class="col-lg-3 text-center">
+                    <form id="pedido" action="" method="POST" onsubmit="return false;">
+                        <fieldset>
+                            <legend>Seu Pedido</legend>
+                            <div class="row" id="carrinhoCoxinha" style="display: none;">
+                                <div class="col-sm-8 small">
+                                    Coxinha
+                                </div>
+                                <div class="col-sm-4 small" id="carrinhoCoxinhaValor">
+                                    R$ 0,00
+                                </div>
+                            </div>
+
+                            <div class="row" id="carrinhoSalsicha" style="display: none;">
+                                <div class="col-sm-8 small">
+                                    Salsicha
+                                </div>
+                                <div class="col-sm-4 small" id="carrinhoSalsichaValor">
+                                    R$ 0,00
+                                </div>
+                            </div>
+
+                            <div class="row" id="carrinhoRisolesCarne" style="display: none;">
+                                <div class="col-sm-8 small">
+                                    Risoles de Carne
+                                </div>
+                                <div class="col-sm-4 small" id="carrinhoRisolesCarneValor">
+                                    R$ 0,00
+                                </div>
+                            </div>
+
+                            <div class="row" id="carrinhoBolinhoQueijo" style="display: none;">
+                                <div class="col-sm-8 small">
+                                    Bolinho de Queijo
+                                </div>
+                                <div class="col-sm-4 small" id="carrinhoBolinhoQueijoValor">
+                                    R$ 0,00
+                                </div>
+                            </div>
+
+                            <div class="row" id="carrinhoAlmondega" style="display: none;">
+                                <div class="col-sm-8 small">
+                                    Almondega
+                                </div>
+                                <div class="col-sm-4 small" id="carrinhoAlmondegaValor">
+                                    R$ 0,00
+                                </div>
+                            </div>
+
+                            <div class="row" id="carrinhoKibeRequeijao" style="display: none;">
+                                <div class="col-sm-8 small">
+                                    Kibe com Requeijão
+                                </div>
+                                <div class="col-sm-4 small" id="carrinhoKibeRequeijaoValor">
+                                    R$ 0,00
+                                </div>
+                            </div>
+
+                            <div class="row" id="carrinhoKibe" style="display: none;">
+                                <div class="col-sm-8 small">
+                                    Kibe (sem requeijão)
+                                </div>
+                                <div class="col-sm-4 small" id="carrinhoKibeValor">
+                                    R$ 0,00
+                                </div>
+                            </div>
+
+                            <div class="row" id="carrinhoPastelCarne" style="display: none;">
+                                <div class="col-sm-8 small">
+                                    Pastel de Carne
+                                </div>
+                                <div class="col-sm-4 small" id="carrinhoPastelCarneValor">
+                                    R$ 0,00
+                                </div>
+                            </div>
+
+                            <div class="row" id="carrinhoPastelFrango" style="display: none;">
+                                <div class="col-sm-8 small">
+                                    Pastel de Frango
+                                </div>
+                                <div class="col-sm-4 small" id="carrinhoPastelFrangoValor">
+                                    R$ 0,00
+                                </div>
+                            </div>
+
+                            <div class="row" id="carrinhorisolesfrango" style="display: none;">
+                                <div class="col-sm-8 small">
+                                    Risoles de Frango
+                                </div>
+                                <div class="col-sm-4 small" id="carrinhorisolesfrangoValor">
+                                    R$ 0,00
+                                </div>
+                            </div>
+
+                            <div class="row" id="carrinhoespetinhofrango" style="display: none;">
+                                <div class="col-sm-8 small">
+                                    Espetinho de Frango
+                                </div>
+                                <div class="col-sm-4 small" id="carrinhoespetinhofrangoValor">
+                                    R$ 0,00
+                                </div>
+                            </div>
+
+                            <div class="row" id="carrinhopastelpizza" style="display: none;">
+                                <div class="col-sm-8 small">
+                                    Pastel de Pizza
+                                </div>
+                                <div class="col-sm-4 small" id="carrinhopastelpizzaValor">
+                                    R$ 0,00
+                                </div>
+                            </div>
+
+                            <div class="row" id="carrinhochurros" style="display: none;">
+                                <div class="col-sm-8 small">
+                                    Churros de Doce de Leite
+                                </div>
+                                <div class="col-sm-4 small" id="carrinhochurrosValor">
+                                    R$ 0,00
+                                </div>
+                            </div>
+
+
+                        </fieldset>
+                        <br />
+                        <div id="valor">
+                            R$ 0,00
+                        </div>
+                        <br />
+                        <input id="inputValor" name="valor" type="hidden">
+                        <input id="inputCoxinhaValor" name="coxinha_valor" type="hidden">
+                        <input id="inputCoxinhaQtd" name="coxinha_qtd" type="hidden">
+                        <input id="inputSalsichaValor" name="salsicha_valor" type="hidden">
+                        <input id="inputSalsichaQtd" name="salsicha_qtd" type="hidden">
+                        <input id="inputRisolesCarneValor" name="risoles_carne_valor" type="hidden">
+                        <input id="inputRisolesCarneQtd" name="risoles_carne_qtd" type="hidden">
+                        <input id="inputAlmondegaValor" name="almondega_valor" type="hidden">
+                        <input id="inputAlmondegaQtd" name="almondega_qtd" type="hidden">
+                        <input id="inputBolinhoQueijoValor" name="bolinho_queijo_valor" type="hidden">
+                        <input id="inputBolinhoQueijoQtd" name="bolinho_queijo_qtd" type="hidden">
+                        <input id="inputKibeRequeijaoValor" name="kibe_requeijao_valor" type="hidden">
+                        <input id="inputKibeRequeijaoQtd" name="kibe_requeijao_qtd" type="hidden">
+                        <input id="inputKibeValor" name="kibe_valor" type="hidden">
+                        <input id="inputKibeQtd" name="kibe_qtd" type="hidden">
+                        <input id="inputPastelCarneValor" name="pastel_carne_valor" type="hidden">
+                        <input id="inputPastelCarneQtd" name="pastel_carne_qtd" type="hidden">
+                        <input id="inputPastelFrangoValor" name="pastel_frango_valor" type="hidden">
+                        <input id="inputPastelFrangoQtd" name="pastel_frango_qtd" type="hidden">
+                        <input id="inputrisolesfrangoValor" name="risolesfrango_valor" type="hidden">
+                        <input id="inputrisolesfrangoQtd" name="risolesfrango_qtd" type="hidden">
+                        <input id="inputespetinhofrangoValor" name="espetinhofrango_valor" type="hidden">
+                        <input id="inputespetinhofrangoQtd" name="espetinhofrango_qtd" type="hidden">
+                        <input id="inputpastelpizzaValor" name="pastel_pizza_valor" type="hidden">
+                        <input id="inputpastelpizzaQtd" name="pastel_pizza_qtd" type="hidden">
+                        <input id="inputchurros" name="churros" type="hidden">
+                        <input id="inputchurrosValor" name="churros_valor" type="hidden">
+                        <input id="inputchurrosQtd" name="churros_qtd" type="hidden">
+
+
+                        <div class="form-group">                            
+                            <div class="input-group">
+                                <span class="input-group-addon" style="width: 80px;">Nome</span>
+                                <input type="text" name="nome" class="form-control">                                
+                            </div>
+                        </div>
+
+                        <div class="form-group">                            
+                            <div class="input-group">
+                                <span class="input-group-addon" style="width: 80px;">Telefone</span>
+                                <input type="text" name="telefone" class="form-control">                                
+                            </div>
+                        </div>
+
+                        <div class="form-group">                            
+                            <div class="input-group">
+                                <span class="input-group-addon" style="width: 80px;">E-Mail</span>
+                                <input type="text" name="email" class="form-control">                                
+                            </div>
+                        </div>
+
+                        <div class="form-group">                            
+                            <div class="input-group">
+                                <span class="input-group-addon" style="width: 80px;">Obs</span>
+                                <textarea name="obs" class="form-control"></textarea>
+                            </div>
+                        </div>
+
+                        <div id="retorno"></div>
+
+                        <input onclick="envia('#pedido', '#retorno', 'http://www.meusalgado.com.br/envia.php', 'http://www.meusalgado.com.br')" type="submit" value="Efetuar Pedido" class="btn btn-
+
+danger">
+                    </form>
+                </div>
+
+
+            </div>
+
+        </div><!-- /.container -->
+
+
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="http://www.meusalgado.com.br/js/jquery.min.js"></script>
+        <script type="text/javascript">
+
+
+
+
+            var valorCoxinha = 7.50;
+            var valorSalsicha = 7.50;
+            var valorBolinhoQueijo = 7.50;
+            var valorRisolesCarne = 7.50;
+            var valorAlmondega = 7.50;
+            var valorKibeRequeijao = 7.50;
+            var valorKibe = 7.50;
+            var valorPastelCarne = 7.50;
+            var valorPastelFrango = 7.50;
+var valorrisolesfrango = 7.50;
+            var valorespetinhofrango = 9.50;
+            var valorpastelpizza = 7.50;
+            var valorchurros = 9.50;
+
+            var total = 0;
+            var coxinha = 0;
+            var salsicha = 0;
+            var bolinhoQueijo = 0;
+            var risolesCarne = 0;
+            var almondega = 0;
+            var kibeRequeijao = 0;
+            var kibe = 0;
+            var pastelCarne = 0;
+            var pastelFrango = 0;
+    var risolesfrango = 0;
+            var espetinhofrango = 0;
+            var pastelpizza = 0;
+            var churros = 0;
+
+
+            function totalValor(valor, tipo) {
+                if (tipo === '+') {
+                    total += valor;
+                } else {
+                    total -= valor;
+                }
+
+                $("#inputValor").val(total);
+                $("#valor").html('R$ ' + total + '');
+
+
+            }
+
+            function add(id) {
+
+
+                if (id === '#pastelCarne') {
+                    pastelCarne++;
+                    valor = pastelCarne * valorPastelCarne;
+                    $("#inputPastelCarneValor").val(valor);
+                    $("#inputPastelCarneQtd").val(pastelCarne);
+                    $("#carrinhoPastelCarneValor").html('R$ ' + valor + '');
+                    $("#valorPastelCarne").html('R$ ' + valor + '');
+                    $("#carrinhoPastelCarne").show();
+                    totalValor(valorPastelCarne, '+');
+                }
+
+
+                if (id === '#pastelFrango') {
+                    pastelFrango++;
+                    valor = pastelFrango * valorPastelFrango;
+                    $("#inputPastelFrangoValor").val(valor);
+                    $("#inputPastelFrangoQtd").val(pastelFrango);
+                    $("#carrinhoPastelFrangoValor").html('R$ ' + valor + '');
+                    $("#valorPastelFrango").html('R$ ' + valor + '');
+                    $("#carrinhoPastelFrango").show();
+                    totalValor(valorPastelFrango, '+');
+                }
+
+
+                if (id === '#kibe') {
+                    kibe++;
+                    valor = kibe * valorKibe;
+                    $("#inputKibeValor").val(valor);
+                    $("#inputKibeQtd").val(kibe);
+                    $("#carrinhoKibeValor").html('R$ ' + valor + '');
+                    $("#valorKibe").html('R$ ' + valor + '');
+                    $("#carrinhoKibe").show();
+                    totalValor(valorKibe, '+');
+                }
+
+                if (id === '#kibeRequeijao') {
+                    kibeRequeijao++;
+                    valor = kibeRequeijao * valorKibeRequeijao;
+                    $("#inputKibeRequeijaoValor").val(valor);
+                    $("#inputKibeRequeijaoQtd").val(kibeRequeijao);
+                    $("#carrinhoKibeRequeijaoValor").html('R$ ' + valor + '');
+                    $("#valorKibeRequeijao").html('R$ ' + valor + '');
+                    $("#carrinhoKibeRequeijao").show();
+                    totalValor(valorKibeRequeijao, '+');
+                }
+
+                if (id === '#almondega') {
+                    almondega++;
+                    valor = almondega * valorAlmondega;
+                    $("#inputAlmondegaValor").val(valor);
+                    $("#inputAlmondegaQtd").val(risolesCarne);
+                    $("#carrinhoAlmondegaValor").html('R$ ' + valor + '');
+                    $("#valorAlmondega").html('R$ ' + valor + '');
+                    $("#carrinhoAlmondega").show();
+                    totalValor(valorAlmondega, '+');
+                }
+
+                if (id === '#risolesCarne') {
+                    risolesCarne++;
+                    valor = risolesCarne * valorRisolesCarne;
+                    $("#inputRisolesCarneValor").val(valor);
+                    $("#inputRisolesCarneQtd").val(risolesCarne);
+                    $("#carrinhoRisolesCarneValor").html('R$ ' + valor + '');
+                    $("#valorRisolesCarne").html('R$ ' + valor + '');
+                    $("#carrinhoRisolesCarne").show();
+                    totalValor(valorRisolesCarne, '+');
+                }
+
+                if (id === '#bolinhoQueijo') {
+                    bolinhoQueijo++;
+                    valor = bolinhoQueijo * valorBolinhoQueijo;
+                    $("#inputBolinhoQueijoValor").val(valor);
+                    $("#inputBolinhoQueijoQtd").val(bolinhoQueijo);
+                    $("#carrinhoBolinhoQueijoValor").html('R$ ' + valor + '');
+                    $("#valorBolinhoQueijo").html('R$ ' + valor + '');
+                    $("#carrinhoBolinhoQueijo").show();
+                    totalValor(valorBolinhoQueijo, '+');
+                }
+
+                if (id === '#coxinha') {
+                    coxinha++;
+                    valor = coxinha * valorCoxinha;
+                    $("#inputCoxinhaValor").val(valor);
+                    $("#inputCoxinhaQtd").val(coxinha);
+                    $("#carrinhoCoxinhaValor").html('R$ ' + valor + '');
+                    $("#valorCoxinha").html('R$ ' + valor + '');
+                    $("#qtdeCoxinha").html(coxinha*15)
+                    $("#carrinhoCoxinha").show();
+                    totalValor(valorCoxinha, '+');
+                }
+
+                if (id === '#salsicha') {
+                    salsicha++;
+                    valor = salsicha * valorSalsicha;
+                    $("#inputSalsichaValor").val(valor);
+                    $("#inputSalsichaQtd").val(salsicha);
+                    $("#carrinhoSalsichaValor").html('R$ ' + valor + '');
+                    $("#valorSalsicha").html('R$ ' + valor + '');
+                    $("#carrinhoSalsicha").show();
+                    totalValor(valorSalsicha, '+');
+                }
+if (id === '#risolesfrango') {
+                    risolesfrango++;
+                    valor = risolesfrango * valorrisolesfrango;
+                    $("#inputrisolesfrangoValor").val(valor);
+                    $("#inputrisolesfrangoQtd").val(risolesfrango);
+                    $("#carrinhorisolesfrangoValor").html('R$ ' + valor + '');
+                    $("#valorrisolesfrango").html('R$ ' + valor + '');
+                    $("#carrinhorisolesfrango").show();
+                    totalValor(valorrisolesfrango, '+');
+                }
+if (id === '#espetinhofrango') {
+                    espetinhofrango++;
+                    valor = espetinhofrango * valorespetinhofrango;
+                    $("#inputespetinhofrangoValor").val(valor);
+                    $("#inputespetinhofrangoQtd").val(espetinhofrango);
+                    $("#carrinhoespetinhofrangoValor").html('R$ ' + valor + '');
+                    $("#valorespetinhofrango").html('R$ ' + valor + '');
+                    $("#carrinhoespetinhofrango").show();
+                    totalValor(valorespetinhofrango, '+');
+                }
+if (id === '#pastelpizza') {
+                    pastelpizza++;
+                    valor = pastelpizza * valorpastelpizza;
+                    $("#inputpastelpizzaValor").val(valor);
+                    $("#inputpastelpizzaQtd").val(pastelpizza);
+                    $("#carrinhopastelpizzaValor").html('R$ ' + valor + '');
+                    $("#valorpastelpizza").html('R$ ' + valor + '');
+                    $("#carrinhopastelpizza").show();
+                    totalValor(valorpastelpizza, '+');
+                }
+if (id === '#churros') {
+                    churros++;
+                    valor = churros * valorchurros;
+                    $("#inputchurrosValor").val(valor);
+                    $("#inputchurrosQtd").val(churros);
+                    $("#carrinhochurrosValor").html('R$ ' + valor + '');
+                    $("#valorchurros").html('R$ ' + valor + '');
+                    $("#carrinhochurros").show();
+                    totalValor(valorchurros, '+');
+                }
+
+            }
+
+            function menos(id) {
+
+                if (id === '#pastelCarne') {
+                    if (pastelCarne === 0) {
+                        $("#carrinhoPastelCarne").hide();
+                        return;
+                    }
+                    pastelCarne--;
+                    valor = pastelCarne * valorPastelCarne;
+                    $("#inputPastelCarneValor").val(valor);
+                    $("#inputPastelCarneQtd").val(pastelCarne);
+                    $("#carrinhoPastelCarneValor").html('R$ ' + valor + '');
+                    $("#valorPastelCarne").html('R$ ' + valor + '');
+                    $("#carrinhoPastelCarne").show();
+
+                    totalValor(valorPastelCarne, '-');
+                }
+
+                if (id === '#pastelFrango') {
+                    if (pastelFrango === 0) {
+                        $("#carrinhoPastelFrango").hide();
+                        return;
+                    }
+                    pastelFrango--;
+                    valor = pastelFrango * valorPastelFrango;
+                    $("#inputPastelFrangoValor").val(valor);
+                    $("#inputPastelFrangoQtd").val(pastelFrango);
+                    $("#carrinhoPastelFrangoValor").html('R$ ' + valor + '');
+                    $("#valorPastelFrango").html('R$ ' + valor + '');
+                    $("#carrinhoPastelFrango").show();
+
+                    totalValor(valorPastelFrango, '-');
+                }
+
+
+                if (id === '#kibe') {
+                    if (kibe === 0) {
+                        $("#carrinhoKibe").hide();
+                        return;
+                    }
+                    kibe--;
+                    valor = kibe * valorKibe;
+                    $("#inputKibeValor").val(valor);
+                    $("#inputKibeQtd").val(kibe);
+                    $("#carrinhoKibeValor").html('R$ ' + valor + '');
+                    $("#valorKibe").html('R$ ' + valor + '');
+                    $("#carrinhoKibe").show();
+
+                    totalValor(valorKibe, '-');
+                }
+
+
+                if (id === '#kibeRequeijao') {
+                    if (kibeRequeijao === 0) {
+                        $("#carrinhoKibeRequeijao").hide();
+                        return;
+                    }
+                    kibeRequeijao--;
+                    valor = kibeRequeijao * valorKibeRequeijao;
+                    $("#inputKibeRequeijaoValor").val(valor);
+                    $("#inputKibeRequeijaoQtd").val(kibeRequeijao);
+                    $("#carrinhoKibeRequeijaoValor").html('R$ ' + valor + '');
+                    $("#valorKibeRequeijao").html('R$ ' + valor + '');
+                    $("#carrinhoKibeRequeijao").show();
+
+                    totalValor(valorKibeRequeijao, '-');
+                }
+
+                if (id === '#almondega') {
+                    if (almondega === 0) {
+                        $("#carrinhoAlmondega").hide();
+                        return;
+                    }
+                    almondega--;
+                    valor = almondega * valorAlmondega;
+                    $("#inputAlmondegaValor").val(valor);
+                    $("#inputAlmondegaQtd").val(almondega);
+                    $("#carrinhoAlmondegaValor").html('R$ ' + valor + '');
+                    $("#valorAlmondega").html('R$ ' + valor + '');
+                    $("#carrinhoAlmondega").show();
+
+                    totalValor(valorAlmondega, '-');
+                }
+
+                if (id === '#risolesCarne') {
+                    if (risolesCarne === 0) {
+                        $("#carrinhoRisolesCarne").hide();
+                        return;
+                    }
+                    risolesCarne--;
+                    valor = risolesCarne * valorRisolesCarne;
+                    $("#inputRisolesCarneValor").val(valor);
+                    $("#inputRisolesCarneQtd").val(risolesCarne);
+                    $("#carrinhoRisolesCarneValor").html('R$ ' + valor + '');
+                    $("#valorRisolesCarne").html('R$ ' + valor + '');
+                    $("#carrinhoRisolesCarne").show();
+
+                    totalValor(valorRisolesCarne, '-');
+                }
+
+                if (id === '#bolinhoQueijo') {
+                    if (bolinhoQueijo === 0) {
+                        $("#carrinhoBolinhoQueijo").hide();
+                        return;
+                    }
+                    bolinhoQueijo--;
+                    valor = bolinhoQueijo * valorBolinhoQueijo;
+                    $("#inputBolinhoQueijo").val(valor);
+                    $("#inputBolinhoQueijoQtd").val(bolinhoQueijo);
+                    $("#carrinhoBolinhoQueijoValor").html('R$ ' + valor + '');
+                    $("#valorBolinhoQueijo").html('R$ ' + valor + '');
+                    $("#carrinhoBolinhoQueijo").show();
+
+                    totalValor(valorBolinhoQueijo, '-');
+                }
+
+                if (id === '#coxinha') {
+                    if (coxinha === 0) {
+                        $("#carrinhoCoxinha").hide();
+                        return;
+                    }
+                    coxinha--;
+                    valor = coxinha * valorCoxinha;
+                    $("#inputCoxinhaValor").val(valor);
+                    $("#inputCoxinhaQtd").val(coxinha);
+                    $("#carrinhoCoxinhaValor").html('R$ ' + valor + '');
+                    $("#valorCoxinha").html('R$ ' + valor + '');
+                    $("#qtdeCoxinha").html(coxinha*15)
+                    $("#carrinhoCoxinha").show();
+
+                    totalValor(valorCoxinha, '-');
+                }
+
+                if (id === '#salsicha') {
+                    if (salsicha === 0) {
+                        $("#carrinhoSalsicha").hide();
+                        return;
+                    }
+                    salsicha--;
+                    valor = salsicha * valorCoxinha;
+                    $("#inputSalsichaValor").val(valor);
+                    $("#inputSalsichaQtd").val(salsicha);
+                    $("#carrinhoSalsichaValor").html('R$ ' + valor + '');
+                    $("#valorSalsicha").html('R$ ' + valor + '');
+                    $("#carrinhoSalsicha").show();
+
+                    totalValor(valorSalsicha, '-');
+                }
+
+                if (id === '#risolesfrango') {
+                    if (risolesfrango === 0) {
+                        $("#carrinhorisolesfrango").hide();
+                        return;
+                    }
+                    salsicha--;
+                    valor = risolesfrango * valorrisolesfrango;
+                    $("#inputrisolesfrangoValor").val(valor);
+                    $("#inputrisolesfrangoQtd").val(risolesfrango);
+                    $("#carrinhorisolesfrangoValor").html('R$ ' + valor + '');
+                    $("#valorrisolesfrango").html('R$ ' + valor + '');
+                    $("#carrinhorisolesfrango").show();
+
+                    totalValor(valorrisolesfrango, '-');
+                }
+               
+if (id === '#espetinhofrango') {
+                    if (espetinhofrango === 0) {
+                        $("#carrinhoespetinhofrango").hide();
+                        return;
+                    }
+                    salsicha--;
+                    valor = espetinhofrango * valorespetinhofrango;
+                    $("#inputespetinhofrangoValor").val(valor);
+                    $("#inputespetinhofrangoQtd").val(espetinhofrango);
+                    $("#carrinhoespetinhofrangoValor").html('R$ ' + valor + '');
+                    $("#valorespetinhofrango").html('R$ ' + valor + '');
+                    $("#carrinhoespetinhofrango").show();
+
+                    totalValor(valorespetinhofrango, '-');
+                }
+
+if (id === '#pastelpizza') {
+                    if (pastelpizza === 0) {
+                        $("#carrinhopastelpizza").hide();
+                        return;
+                    }
+                    salsicha--;
+                    valor = pastelpizza * valorpastelpizza;
+                    $("#inputpastelpizzaValor").val(valor);
+                    $("#inputpastelpizzaQtd").val(espetinhofrango);
+                    $("#carrinhopastelpizzaValor").html('R$ ' + valor + '');
+                    $("#valorpastelpizza").html('R$ ' + valor + '');
+                    $("#carrinhopastelpizza").show();
+
+                    totalValor(valorpastelpizza, '-');
+                }
+
+if (id === '#churros') {
+                    if (churros === 0) {
+                        $("#carrinhochurros").hide();
+                        return;
+                    }
+                    salsicha--;
+                    valor = churros * valorchurros;
+                    $("#inputchurrosValor").val(valor);
+                    $("#inputchurrosQtd").val(churros);
+                    $("#carrinhochurrosValor").html('R$ ' + valor + '');
+                    $("#valorchurros").html('R$ ' + valor + '');
+                    $("#carrinhochurros").show();
+
+                    totalValor(valorchurros, '-');
+                }
+
+            }
+
+            function envia(form, retorno, url, urlRedir) {
+
+                var data = $(form).serialize();
+                var conteudo = ajaxOpen(url, data);
+                if (conteudo === 'sucesso') {
+                    $(retorno).html("<div class='msg-ok'>Enviado com sucesso. Redirecionando...</div>");
+                    location.href = urlRedir;
+
+                } else {
+                    $(retorno).html('<div class="msg-error">' + conteudo + '</div>');
+                }
+
+                return false;
+            }
+
+            function ajaxOpen(link, data) {
+                return $.ajax({
+                    type: "POST",
+                    enctype: 'multipart/form-data',
+                    cache: false,
+                    url: link,
+                    data: data,
+                    async: false
+                }).responseText;
+            }
+
+
+
+        </script>
+
+    </body>
+</html>
